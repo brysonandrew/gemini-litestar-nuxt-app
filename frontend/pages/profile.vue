@@ -35,17 +35,17 @@ function logout() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-100 p-8">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md mx-auto">
-      <h1 class="text-2xl font-bold mb-6">Profile</h1>
-      <div v-if="user">
-        <p><strong>Name:</strong> {{ user.name }}</p>
+  <div class="min-h-screen flex items-center justify-center bg-[rgb(var(--color-clay-light-bg))] dark:bg-[rgb(var(--color-clay-dark-bg))] transition-colors duration-300">
+    <div class="bg-[rgb(var(--color-clay-light-card))] dark:bg-[rgb(var(--color-clay-dark-card))] p-8 rounded-3xl shadow-clay-light dark:shadow-clay-dark w-full max-w-md mx-auto transition-all duration-300">
+      <h1 class="text-2xl font-bold mb-6 text-[rgb(var(--color-clay-light-text))] dark:text-[rgb(var(--color-clay-dark-text))] text-center">Profile</h1>
+      <div v-if="user" class="text-[rgb(var(--color-clay-light-text))] dark:text-[rgb(var(--color-clay-dark-text))]">
+        <p class="mb-2"><strong>Name:</strong> {{ user.name }}</p>
         <p><strong>Email:</strong> {{ user.email }}</p>
       </div>
-      <div v-else>
+      <div v-else class="text-[rgb(var(--color-clay-light-text))] dark:text-[rgb(var(--color-clay-dark-text))]">
         <p>Loading...</p>
       </div>
-      <button @click="logout" class="mt-6 w-full bg-red-500 text-white py-2 rounded-lg">Logout</button>
+      <button @click="logout" class="mt-6 w-full bg-red-500 text-white py-3 rounded-xl font-semibold hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 dark:focus:ring-red-600 shadow-clay-button-light dark:shadow-clay-button-dark transition-all duration-300">Logout</button>
     </div>
   </div>
 </template>

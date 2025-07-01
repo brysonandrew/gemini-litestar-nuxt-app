@@ -1,0 +1,30 @@
+:root {
+  --color-clay-light-bg: 243 244 246;
+  --color-clay-light-card: 255 255 255;
+  --color-clay-light-text: 55 65 81;
+  --color-clay-light-input-bg: 229 231 235;
+  --color-clay-light-input-text: 17 24 39;
+  --color-clay-light-input-placeholder: 107 114 128;
+  --color-clay-light-shadow-dark: 184 184 184;
+  --color-clay-light-shadow-light: 255 255 255;
+
+  --color-clay-dark-bg: 17 24 39;
+  --color-clay-dark-card: 31 41 55;
+  --color-clay-dark-text: 209 213 219;
+  --color-clay-dark-input-bg: 55 65 81;
+  --color-clay-dark-input-text: 255 255 255;
+  --color-clay-dark-input-placeholder: 156 163 175;
+  --color-clay-dark-shadow-dark: 26 26 26;
+  --color-clay-dark-shadow-light: 51 51 51;
+}
+
+.dark {
+  --color-clay-light-bg: var(--color-clay-dark-bg);
+  --color-clay-light-card: var(--color-clay-dark-card);
+  --color-clay-light-text: var(--color-clay-dark-text);
+  --color-clay-light-input-bg: var(--color-clay-dark-input-bg);
+  --color-clay-light-input-text: var(--color-clay-dark-input-text);
+  --color-clay-light-input-placeholder: var(--color-clay-dark-input-placeholder);
+  --color-clay-light-shadow-dark: var(--color-clay-dark-shadow-dark);
+  --color-clay-light-shadow-light: var(--color-clay-dark-shadow-light);
+}

@@ -1,3 +1,36 @@
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const email = ref('');
+const password = ref('');
+const router = useRouter();
+
+async function login() {
+  console.log("LOGIN")
+  const body = { email: email.value, password: password.value };
+  console.log(body);
+  const response = await fetch('http://localhost:8000/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+
+  console.log(response);
+
+  if (response.ok) {
+    const data = await response.json();
+    localStorage.setItem('token', data.token);
+    router.push('/profile');
+  } else {
+    // Handle login error
+    console.error('Login failed');
+  }
+}
+</script>
+
 <template>
   <div class="min-h-screen bg-gray-100 flex items-center justify-center">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
@@ -42,36 +75,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-
-const email = ref('');
-const password = ref('');
-const router = useRouter();
-
-async function login() {
-  console.log("LOGIN")
-  const body = { email: email.value, password: password.value };
-  console.log(body);
-  const response = await fetch('http://localhost:8000/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  });
-
-  console.log(response);
-
-  if (response.ok) {
-    const data = await response.json();
-    localStorage.setItem('token', data.token);
-    router.push('/profile');
-  } else {
-    // Handle login error
-    console.error('Login failed');
-  }
-}
-</script>

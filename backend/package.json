@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "stop": "pkill -f uvicorn",
-    "start": "venv/bin/uvicorn app:app --reload"
+    "start": "venv/bin/uvicorn app:app --reload",
+    "test": "python3 tests/test_app.py"
   }
 }

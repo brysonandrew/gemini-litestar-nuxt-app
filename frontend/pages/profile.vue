@@ -17,7 +17,6 @@ onMounted(async () => {
     if (response.ok) {
       const result = await response.json()
       user.value = result
-      console.log(result)
     } else {
       // Handle error, e.g., token expired or invalid
       console.error('Failed to fetch profile')

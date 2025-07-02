@@ -16,15 +16,11 @@ async function login() {
 		body: JSON.stringify(body),
 	});
 
-	console.log(response);
-
 	if (response.ok) {
 		const data = await response.json();
-		console.log('TOKEN', data, data.token);
 		localStorage.setItem('token', data.token);
 		router.push('/profile');
 	} else {
-		// Handle login error
 		console.error('Login failed');
 	}
 }

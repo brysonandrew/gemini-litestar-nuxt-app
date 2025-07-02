@@ -17,6 +17,7 @@ frontend/dist/
 frontend/npm-debug.log
 frontend/yarn-debug.log
 frontend/yarn-error.log
+frontend/pnpm-lock.yaml
 frontend/.npm/
 frontend/.yarn/
 

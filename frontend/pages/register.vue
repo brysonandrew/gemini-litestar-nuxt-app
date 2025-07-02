@@ -21,7 +21,6 @@ async function register() {
     localStorage.setItem('token', data.token)
     router.push('/profile')
   } else {
-    // Handle registration error
     console.error('Registration failed')
   }
 }

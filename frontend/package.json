@@ -1,20 +1,21 @@
 {
-  "name": "frontend",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "nuxt": "^3.0.0",
-    "tailwindcss": "^4.1.11",
-    "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
-  },
-  "devDependencies": {
-    "typescript": "^4.9.4"
-  }
+	"name": "frontend",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview"
+	},
+	"dependencies": {
+		"@nuxtjs/color-mode": "^3.5.2",
+		"@tailwindcss/vite": "^4.1.11",
+		"nuxt": "^3.0.0",
+		"tailwindcss": "^4.1.11",
+		"vue": "^3.2.47",
+		"vue-router": "^4.1.6"
+	},
+	"devDependencies": {
+		"typescript": "^4.9.4"
+	}
 }

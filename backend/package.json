@@ -1,0 +1,8 @@
+{
+  "name": "backend",
+  "private": true,
+  "scripts": {
+    "stop": "pkill -f uvicorn",
+    "start": "venv/bin/uvicorn app:app --reload"
+  }
+}

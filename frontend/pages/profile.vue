@@ -7,7 +7,6 @@ const router = useRouter()
 
 onMounted(async () => {
   const token = localStorage.getItem('token')
-  console.log(token)
   if (token) {
     const response = await fetch('http://localhost:8000/profile', {
       headers: {
@@ -16,7 +15,9 @@ onMounted(async () => {
     })
 
     if (response.ok) {
-      user.value = await response.json()
+      const result = await response.json()
+      user.value = result
+      console.log(result)
     } else {
       // Handle error, e.g., token expired or invalid
       console.error('Failed to fetch profile')
